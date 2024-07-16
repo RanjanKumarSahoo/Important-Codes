@@ -1,0 +1,48 @@
+package Demo;
+
+import java.net.HttpURLConnection;
+import java.net.URI;
+import java.net.URL;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+	public static void main(String[] args) {
+        WebDriver driver=new ChromeDriver();
+        driver.get("https://www.flipkart.com/");
+       List<WebElement> alllinks= driver.findElements(By.xpath("//a"));
+       System.out.println(alllinks.size());
+       for(WebElement link: alllinks ) {
+    	  String li= link.getAttribute("href");
+    	  brokenLinks(li);
+    	  
+       }
+       
+       driver.close();
+    }
+	public static void brokenLinks(String linkURL) {
+		try {
+			URL url=new URL(linkURL);
+		HttpURLConnection httpurlconnection = (HttpURLConnection) url.openConnection();
+			httpurlconnection.connect();
+			if(httpurlconnection.getResponseCode() >=400) {
+				System.out.println(linkURL + "--->" + httpurlconnection.getResponseMessage() + "is a broken link");
+			}else {
+				System.out.println(linkURL +"--->" + httpurlconnection.getResponseMessage());
+			}
+		}
+		catch(Exception e){
+			
+		}
+	}
+	}
+
+	
+
+

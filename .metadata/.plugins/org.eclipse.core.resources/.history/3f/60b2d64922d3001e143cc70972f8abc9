@@ -1,0 +1,25 @@
+package Demo;
+
+import java.util.Arrays;
+
+public class Demo1 {
+	//Input: abaa
+	//Output: a3, b1
+	public static void getCount(String name) {
+
+		
+		        String input = "98069032";
+		        char[] digits = input.toCharArray();
+
+		        // Sort the digits except for the first one
+		        Arrays.sort(digits, 1, digits.length);
+
+		        // Print the modified number
+		        System.out.println(new String(digits));
+		    }
+		}
+
+
+
+	
+

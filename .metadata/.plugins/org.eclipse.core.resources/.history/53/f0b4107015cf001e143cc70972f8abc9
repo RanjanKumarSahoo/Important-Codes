@@ -1,0 +1,33 @@
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.orangehrm.qa.pages.HomePage;
+
+public class Demo {
+static {
+	System.setProperty("webdriver.chrome.driver", "./driver/chromedriver.exe");
+}
+@SuppressWarnings("deprecation")
+public static void main(String[] args) {
+	WebDriver driver=new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+	driver.get("https://opensource-demo.orangehrmlive.com/");
+	driver.findElement(By.name("username")).sendKeys("Admin");
+	driver.findElement(By.name("password")).sendKeys("admin123");
+	driver.findElement(By.xpath("//button[@type='submit']")).click(); 
+	List<WebElement> pim=driver.findElements(By.xpath("//a[@class='oxd-main-menu-item']"));
+	pim.get(1).click();
+	driver.findElement(By.partialLinkText("Add Employee")).click();
+	
+	 
+	
+}
+}

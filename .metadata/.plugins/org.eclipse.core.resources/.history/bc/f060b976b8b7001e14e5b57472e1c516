@@ -1,0 +1,19 @@
+package Demo;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Demo {
+public static void main(String[] args) {
+	int n=789;
+	int rev=0;
+	int lastdigit;
+	while(n>0) {
+lastdigit=n%10;
+rev=rev*10+lastdigit;
+n=rev/10;
+	}
+	System.out.println(n);
+}
+}

@@ -1,0 +1,49 @@
+package com.orangehrm.qa.testCases;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import com.orangehrm.qa.base.TestBase;
+import com.orangehrm.qa.pages.HomePage;
+import com.orangehrm.qa.pages.LoginPage;
+
+public class HomePageTest extends TestBase {
+	
+	LoginPage loginPage;
+	HomePage homePage;
+	String Fname="qw";
+	String Mname="qwert";
+	
+	public HomePageTest() {
+		super();
+	}
+@BeforeMethod
+public void setUp() {
+	initialization();
+	loginPage=new LoginPage();
+	homePage=new HomePage();
+	homePage=loginPage.doLogin("Admin", "admin123");
+	homePage.clickPIM();
+}
+
+@Test
+public void AddNewEmployee() {
+	String confirmMessage = homePage.addEmployee(Fname, Mname, "cc", "abo902", "Abc@123", "Abc@123");
+	Assert.assertEquals(confirmMessage, "Success");
+}
+
+@Test
+public void SearchEmployee() throws InterruptedException {
+	String search=homePage.searchEmployee(Fname+ " "+Mname);
+	Assert.assertEquals(search, Fname+ " "+Mname);
+}
+
+
+@AfterMethod
+public void tearDown() {
+	driver.quit();
+}
+
+}

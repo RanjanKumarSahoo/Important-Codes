@@ -1,0 +1,32 @@
+package Demo;
+
+public class Demo1 {
+	    public static void main(String[] args) {
+	        String input = "Hello World";
+	        String output = reverseWords(input);
+	        System.out.println(output); // Output: llehW dlroW
+	    }
+
+	    public static String reverseWords(String str) {
+	        String[] words = str.split("\\s+");
+	        StringBuilder result = new StringBuilder();
+
+	        for (String word : words) {
+	            String reversedWord = reverseString(word);
+	            result.append(reversedWord).append(" ");
+	        }
+
+	        return result.toString().trim();
+	    }
+
+	    public static String reverseString(String str) {
+	        StringBuilder reversed = new StringBuilder();
+	        for (int i = str.length() - 1; i >= 0; i--) {
+	            reversed.append(str.charAt(i));
+	        }
+	        return reversed.toString();
+	    }
+	}
+
+	
+

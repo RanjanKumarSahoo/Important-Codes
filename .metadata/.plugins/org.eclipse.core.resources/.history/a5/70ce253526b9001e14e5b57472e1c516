@@ -1,0 +1,36 @@
+package Demo;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Demo {
+	    public static void main(String[] args) {
+	        int limit = 19;
+	        long sumOfPrimes = calculateSumOfPrimes(limit);
+
+	        System.out.println("Sum of prime numbers up to " + limit + ": " + sumOfPrimes);
+	    }
+
+	    public static long calculateSumOfPrimes(int limit) {
+	        long sum = 0;
+	        for (int num = 2; num <= limit; num++) {
+	            if (isPrime(num)) {
+	                sum += num;
+	            }
+	        }
+	        return sum;
+	    }
+
+	    public static boolean isPrime(int num) {
+	        if (num <= 1) {
+	            return false;
+	        }
+	        for (int i = 2; i <= Math.sqrt(num); i++) {
+	            if (num % i == 0) {
+	                return false;
+	            }
+	        }
+	        return true;
+	    }
+	}
+

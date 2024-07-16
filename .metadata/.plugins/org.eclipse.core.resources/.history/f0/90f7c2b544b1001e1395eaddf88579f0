@@ -1,0 +1,26 @@
+package com.demo.rest_asured;
+
+import static org.testng.Assert.assertEquals;
+
+import org.testng.annotations.Test;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class Get {
+@Test
+public static void main(String[] args) {
+    // Specify the base URI
+    RestAssured.baseURI = "https://reqres.in/api";
+
+    // Send a GET request to the /users endpoint with query parameter 'page=2'
+    Response response = RestAssured.get("/users?page=2");
+
+    // Print the response status code
+    System.out.println("Status Code: " + response.getStatusCode());
+
+    // Print the response body
+    System.out.println("Response Body: " + response.getBody().asString());
+}
+}
+

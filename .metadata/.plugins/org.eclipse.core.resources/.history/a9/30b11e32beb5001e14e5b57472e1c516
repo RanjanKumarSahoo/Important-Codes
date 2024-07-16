@@ -1,0 +1,25 @@
+package Programming;
+
+public class Demo {
+	    public static void main(String[] args) {
+	        String str = "Hello Hello";
+	        char targetChar = 'l';
+
+	        int count = countCharacter(str, targetChar);
+	        System.out.println( count);
+	    }
+
+	    private static int countCharacter(String inputString, char targetChar) {
+	        int count = 0;
+
+	        for (int i = 0; i < inputString.length(); i++) {
+	            if (inputString.charAt(i) == targetChar) {
+	                count++;
+	            }
+	        }
+
+	        return count;
+	    }
+	}
+ 
+

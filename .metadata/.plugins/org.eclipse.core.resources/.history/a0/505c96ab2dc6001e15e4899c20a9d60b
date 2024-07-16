@@ -1,0 +1,15 @@
+package Demo;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		String str="ranjan";
+		for(int i=str.length();i>0;i--) {
+			String rev="";
+			rev=rev+str.charAt(i);
+			System.out.print(rev);
+		}
+
+	}
+
+}

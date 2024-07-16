@@ -1,0 +1,35 @@
+package com.orangehrm.qa.pages;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.orangehrm.qa.base.TestBase;
+
+
+
+public class HomePage extends TestBase {
+	
+	
+	@FindBy(className = "oxd-main-menu-item")
+	List<WebElement> PIMlink;
+	
+	@FindBy(partialLinkText = "Add Employee")
+	  WebElement addEmployeeLinkText;
+
+ 	
+	public HomePage() {
+		PageFactory.initElements(driver, this);
+	}
+	
+	
+	public AddEmployeePage clickOnPIM() {
+		List<WebElement> pim=driver.findElements(By.className("oxd-main-menu-item"));
+		pim.get(1).click();
+		driver.findElement(By.partialLinkText("Add Employee")).click();
+		return new AddEmployeePage();
+}
+}

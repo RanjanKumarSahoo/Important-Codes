@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/ranjan-loconav/framework.git"/>
+		<item value="https://github.com/ranjan-loconav/Playwright.git"/>
+		<item value="https://github.com/ranjan-loconav/Playwright/tree/main/driverspage"/>
+		<item value="https://github.com/ranjan-loconav/Playwright/tree/main/drivers"/>
+		<item value="https://git@github.com/naveenanimation20/Playwright-Java-API-Testing.git"/>
+		<item value="git@github.com:naveenanimation20/Playwright-Java-API-Testing.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="bitbucket.org"/>
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+	</list>
+</section>

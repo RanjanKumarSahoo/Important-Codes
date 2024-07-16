@@ -1,0 +1,66 @@
+ 
+/*Different ways to create a post body
+  1. Post request body using HashMap
+  2. Post request body creation using Org.JSON
+  3. Post request body creation using POJO class
+  4. Post request body using external JSON file data
+ */
+
+import java.util.HashMap;
+
+import org.json.JSONObject;
+import org.testng.annotations.Test;
+import static io.restassured.RestAssured.*;
+import static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*;
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+
+public class DifferentWaysToCreatePostRequestBody {
+int id;
+//1. Post request body using HashMap
+//@Test
+public void createByHashMap() {
+	HashMap<String, String> data=new HashMap<>();
+	data.put("name", "morpheus");
+	data.put("job", "leader");
+	                                /*if there is data like courses=[java, python]
+	                                  String courseArr[]= {"java","python"]
+	                                  data.put("Courses", courseArr);*/
+	id=given()
+	.body(data.toString())
+	.when()
+	.post("https://reqres.in/api/users")
+	.jsonPath().getInt("id");
+	/*.then()
+	.statusCode(201)
+	//.body("name", equalTo("Ranjan"))
+	.log().all();*/
+	
+}
+//@Test
+void delete() {
+	when()
+	.delete("https://reqres.in/api/users"+id)
+	.then()
+	.statusCode(204);
+}
+//2. Post request body creation using Org.JSON
+@Test
+public void createByOrgJSON() {
+	JSONObject data=new  JSONObject();
+	data.put("name", "morpheus");
+	data.put("job", "leader");
+	given()
+	.contentType("application/json")
+	.body(data.toString())
+	.when()
+	.post("https://reqres.in/api/users")
+	//.jsonPath().getInt("id");
+	.then()
+	.statusCode(201)
+	.body("name", equalTo("Ranjan"))
+	.log().all();
+}
+}

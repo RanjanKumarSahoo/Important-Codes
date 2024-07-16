@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;Tesy&apos; to &apos;HTTPRequest&apos;&#x0D;&#x0A;- Original project: &apos;RestAssured&apos;&#x0D;&#x0A;- Original element: &apos;Tesy&apos;&#x0D;&#x0A;- Renamed element: &apos;HTTPRequest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Tesy&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/test\/java=/optional=/true=/=/maven.pomderived=/true=/=/test=/true=/&lt;{Tesy.java[Tesy" matchStrategy="1" name="HTTPRequest" qualified="false" references="true" similarDeclarations="false" stamp="1705128803341" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,22 @@
+package Demo;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		int num=97876 ;
+		int ecount=0;
+		int ocount=0;
+		while(num>0) {
+			int rem=num%10;
+			if(rem%2==0)
+				ecount++;
+			else
+				ocount++;
+			num=num/10;
+		}
+		System.out.println(ecount);
+		System.out.println(ocount);
+	}}
+		
+	
+

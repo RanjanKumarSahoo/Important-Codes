@@ -1,0 +1,27 @@
+package Demo;
+
+public class Demo2 {
+	    public static void main(String[] args) {
+	        String input = "Hello";
+	        String output = swapFirstLast(input);
+	        System.out.println(output);
+	    }
+	    
+	    public static String swapFirstLast(String input) {
+	        if (input == null || input.length() < 2) {
+	            return input; // Return input as it is if it's null or has less than 2 characters
+	        }
+	        
+	        char first = input.charAt(0); // Get the first character
+	        char last = input.charAt(input.length() - 1); // Get the last character
+	        
+	        // Create a StringBuilder to construct the output
+	        StringBuilder sb = new StringBuilder(input.substring(1, input.length() - 1));
+	        
+	        // Append the last character followed by the substring from the input (excluding first and last characters)
+	        sb.append(last).append(first);
+	        
+	        return sb.toString();
+	    }
+	}
+

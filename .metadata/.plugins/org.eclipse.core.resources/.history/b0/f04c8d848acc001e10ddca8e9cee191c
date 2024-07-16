@@ -1,0 +1,34 @@
+package Demo;
+
+public class Demo1 {
+	    public static void main(String[] args) {
+	        String input = "Hello World";
+	        String[] words = input.split(" ");
+
+	        // Rearrange each word except the first and last word
+	        for (int i = 1; i < words.length - 1; i++) {
+	            words[i] = rearrangeWord(words[i]);
+	        }
+
+	        // Construct the final rearranged string
+	        StringBuilder result = new StringBuilder();
+	        for (String word : words) {
+	            result.append(word).append(" ");
+	        }
+
+	        // Append the unchanged first and last word
+	        result.insert(0, words[0].substring(0, words[0].length() - 1));
+	        result.append(words[words.length - 1].substring(1));
+
+	        System.out.println(result.toString());
+	    }
+
+	    // Method to rearrange a word
+	    private static String rearrangeWord(String word) {
+	        return word.charAt(word.length() - 1) + word.substring(1, word.length() - 1) + word.charAt(0);
+	    }
+	}
+
+
+	
+

@@ -1,0 +1,17 @@
+package Demo;
+
+public class Demo1 {
+	    public static void main(String[] args) {
+	        String input = "Hello World";
+	        String[] parts = input.split("\\s+"); // Split the input string by whitespace
+	        String part1 = parts[0]; // First part
+	        String part2 = parts[1]; // Second part
+
+	        for (int i=part1.length()
+	    }
+	}
+
+
+
+	
+
