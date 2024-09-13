@@ -3367,3 +3367,37 @@ org.eclipse.jgit.errors.TransportException: https://github.com/RanjanKumarSahoo/
 
 !ENTRY org.eclipse.egit.ui 4 0 2024-09-13 23:02:11.326
 !MESSAGE Can't connect to any repository: https://github.com/RanjanKumarSahoo/Important-Codes.git (https://github.com/RanjanKumarSahoo/Important-Codes.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-09-13 23:10:34.296
+!MESSAGE An exception occurred during push on URI https://github.com/RanjanKumarSahoo/Important-Codes.git: https://github.com/RanjanKumarSahoo/Important-Codes.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/RanjanKumarSahoo/Important-Codes.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:694)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:636)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:540)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1555)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-09-13 23:10:34.297
+!MESSAGE Can't connect to any repository: https://github.com/RanjanKumarSahoo/Important-Codes.git (https://github.com/RanjanKumarSahoo/Important-Codes.git: not authorized)
+
+!ENTRY org.eclipse.egit.core 4 0 2024-09-13 23:13:00.689
+!MESSAGE An exception occurred during push on URI https://github.com/RanjanKumarSahoo/Important-Codes.git: https://github.com/RanjanKumarSahoo/Important-Codes.git: not authorized
+!STACK 0
+org.eclipse.jgit.errors.TransportException: https://github.com/RanjanKumarSahoo/Important-Codes.git: not authorized
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:694)
+	at org.eclipse.jgit.transport.TransportHttp.connect(TransportHttp.java:636)
+	at org.eclipse.jgit.transport.TransportHttp.openPush(TransportHttp.java:540)
+	at org.eclipse.jgit.transport.PushProcess.execute(PushProcess.java:140)
+	at org.eclipse.jgit.transport.Transport.push(Transport.java:1555)
+	at org.eclipse.egit.core.op.PushOperation.run(PushOperation.java:269)
+	at org.eclipse.egit.ui.internal.push.PushJob.performJob(PushJob.java:86)
+	at org.eclipse.egit.ui.internal.jobs.RepositoryJob.run(RepositoryJob.java:59)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.egit.ui 4 0 2024-09-13 23:13:00.690
+!MESSAGE Can't connect to any repository: https://github.com/RanjanKumarSahoo/Important-Codes.git (https://github.com/RanjanKumarSahoo/Important-Codes.git: not authorized)
