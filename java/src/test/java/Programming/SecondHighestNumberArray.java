@@ -1,7 +1,7 @@
 package Programming;
 
 
-public class SecondHighestNumberArray {
+    public class SecondHighestNumberArray {
 
 	public static void main(String[] args) {
 		int[] arr= {6,7,4,20,20,2,9};
@@ -20,17 +20,6 @@ public class SecondHighestNumberArray {
 				l=arr[i];
 			}else if(arr[i]>s) {
 				s=arr[i];
-			}
-		}
-		
+			}}
 		System.out.println(s);
-		
-		
-/*
-int n=num.length;
-Arrays.sort(num);
-System.out.println(num[n-2]);*/
-
-	}
-	
-}
+    	}}

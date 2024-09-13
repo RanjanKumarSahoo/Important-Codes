@@ -1,6 +1,6 @@
 package Programming;
 
-public class Remove_Duplicate_From_String { 
+     public class Remove_Duplicate_From_String { 
 	 
 	 public static void main(String[] args) { 
 	  String str="madam"; 
@@ -13,5 +13,4 @@ public class Remove_Duplicate_From_String {
 	    result+= ch; 
 	  } 
 	  System.out.println(result); 
-	  } 
-	 }
+	  } }

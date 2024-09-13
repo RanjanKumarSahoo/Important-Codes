@@ -1,6 +1,6 @@
 package Program;
 
-public class SumOfANumber {
+    public class SumOfANumber {
 	public static void main(String[] args) {
 		int n=1215;
 		int num=0;
@@ -12,6 +12,4 @@ public class SumOfANumber {
 
 		}
 		System.out.println(sum);
-
-	}
-}
+     }}

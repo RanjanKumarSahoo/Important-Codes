@@ -27,10 +27,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="RestAssuredBDDFramework.RestAssuredBDDFramework"/>
 		</list>
 		<list key="groupId">
+			<item value="RestAssuredBDDFramework"/>
 		</list>
 		<list key="artifactId">
+			<item value="RestAssuredBDDFramework"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -46,12 +49,10 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="Practice"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="Practice"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

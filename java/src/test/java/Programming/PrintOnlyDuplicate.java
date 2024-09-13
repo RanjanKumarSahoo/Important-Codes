@@ -1,8 +1,8 @@
 package Programming;
 
-public class PrintOnlyDuplicate { 
+        public class PrintOnlyDuplicate { 
 	 
-    public static void main(String[] args) { 
+        public static void main(String[] args) { 
         String str = "Ranjan"; 
         String result = ""; 
  
@@ -12,6 +12,4 @@ public class PrintOnlyDuplicate {
                 System.out.print(ch); 
             } 
             result += ch; 
-        } 
-    } 
-}
+         }}}

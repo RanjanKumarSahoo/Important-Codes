@@ -1,7 +1,7 @@
 package Program;
 
-public class ReverseByUsingSplit {
-	  public static void main(String[] args) {
+            public class ReverseByUsingSplit {
+	        public static void main(String[] args) {
 	        String str = "Hello World";
 	        String[] word=str.split("\\s+");
 	        String word1=word[0];
@@ -18,6 +18,4 @@ public class ReverseByUsingSplit {
 	        }
 	        
 	        System.out.println(rev1+" "+rev2);
-	        
-	    }
-}
+	        }}

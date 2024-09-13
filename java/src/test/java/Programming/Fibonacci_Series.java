@@ -1,6 +1,6 @@
 package Programming;
 
-public class Fibonacci_Series { 
+    public class Fibonacci_Series { 
 	 
 	 public static void main(String[] args) { 
 	 int n=8; 
@@ -14,8 +14,4 @@ public class Fibonacci_Series {
 	  System.out.print(t+" "); 
 	   f=s; 
 	   s=t; 
-	   
-	 } 
-	 } 
-	 
-	}
+	   	 }}}
